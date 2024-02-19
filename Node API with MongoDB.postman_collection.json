@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "d48cee4b-132c-4118-9a3b-ce8dea5c9eb4",
+		"name": "Node API with MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32464731"
+	},
+	"item": [
+		{
+			"name": "Perform Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/performQuery/mostTouchdowns"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"TEST\",\n    \"position\": \"TEST\",\n    \"rushingYards\": 100,\n    \"touchdownsThrown\": 100,\n    \"sacks\": 0,\n    \"madeFieldGoals\": 0,\n    \"missedFieldGoals\": 0,\n    \"catches\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/addPlayer"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Player",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"TEST2\",\n    \"position\": \"TEST2\",\n    \"rushingYards\": 1,\n    \"touchdownsThrown\": 1,\n    \"sacks\": 1,\n    \"madeFieldGoals\": 0,\n    \"missedFieldGoals\": 0,\n    \"catches\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/updatePlayer/TEST"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Player",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"TEST2\",\n    \"position\": \"TEST2\",\n    \"rushingYards\": 1,\n    \"touchdownsThrown\": 1,\n    \"sacks\": 1,\n    \"madeFieldGoals\": 0,\n    \"missedFieldGoals\": 0,\n    \"catches\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/deletePlayer/TEST2"
+			},
+			"response": []
+		}
+	]
+}
